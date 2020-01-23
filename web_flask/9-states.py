@@ -16,7 +16,7 @@ def teardown_session(self):
 @app.route('/states/<id>')
 def display_html_page(id=None):
     if id is not None:
-        id = 'State.' +id
+        id = 'State.' + id
     return render_template(
         '9-states.html', states=storage.all("State"), state_id=id)
 
